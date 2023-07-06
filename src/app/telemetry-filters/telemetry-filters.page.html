@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inline Modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-button expand="block" (click)="setOpen(true)">Open</ion-button>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Filters</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-accordion-group>
+          <ion-accordion value="first">
+            <ion-item slot="header" color="light">
+              <ion-label>Migration</ion-label>
+            </ion-item>
+            <!-- <div class="ion-padding" slot="content">First Content</div> -->
+            <div class="ion-padding" slot="content">
+              <ion-card>
+                <ion-card-content>
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col>Flatining</ion-col>
+                      <ion-toggle></ion-toggle><br /><br />
+                    </ion-row>
+
+                    <ion-row>
+                      <ion-col>Tagging</ion-col>
+                      <ion-toggle></ion-toggle><br /><br />
+                    </ion-row>
+
+                    <ion-row>
+                      <ion-col>Fluid Pound</ion-col>
+                      <ion-toggle></ion-toggle><br /><br />
+                    </ion-row>
+
+                    <ion-row>
+                      <ion-col>Gas interference</ion-col>
+                      <ion-toggle></ion-toggle><br /><br />
+                    </ion-row>
+                  </ion-grid>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-accordion>
+        </ion-accordion-group>
+
+        <ion-accordion-group>
+          <ion-accordion value="first">
+            <ion-item slot="header" color="light">
+              <ion-label>Algorithms</ion-label>
+            </ion-item>
+            <!-- <div class="ion-padding" slot="content">First Content</div> -->
+            <div class="ion-padding" slot="content">
+              <ion-card>
+                <ion-card-content>
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col>Production Optimizer PI</ion-col>
+                      <ion-toggle></ion-toggle><br /><br />
+                    </ion-row>
+
+                    <ion-row>
+                      <ion-col>Production Optimizer CI</ion-col>
+                      <ion-toggle></ion-toggle><br /><br />
+                    </ion-row>
+                  </ion-grid>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-accordion>
+        </ion-accordion-group>
+
+        <ion-accordion-group>
+          <ion-accordion value="first">
+            <ion-item slot="header" color="light">
+              <ion-label>POC settings</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">
+              <ion-card>
+                <ion-card-content>
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col>Primary Fillage</ion-col>
+                      <ion-toggle></ion-toggle><br /><br />
+                    </ion-row>
+
+                    <ion-row>
+                      <ion-col>Secondary Pump Fillage</ion-col>
+                      <ion-toggle></ion-toggle><br /><br />
+                    </ion-row>
+                  </ion-grid>
+
+                  <ion-grid>
+                    <ion-row>
+                      <ion-label>Downtime</ion-label>
+                    </ion-row>
+
+                    <ion-row>
+                      <ion-datetime locale="en"></ion-datetime>
+                    </ion-row>
+                  </ion-grid>
+                </ion-card-content>
+
+                <ion-button>Apply All</ion-button>
+                <ion-button>Apply This</ion-button>
+              </ion-card>
+            </div>
+          </ion-accordion>
+        </ion-accordion-group>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

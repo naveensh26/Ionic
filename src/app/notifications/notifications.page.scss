@@ -1,0 +1,48 @@
+.verticalLine {
+  width: 10%;
+  height: 100%;
+}
+
+line {
+  height: 100%;
+  background-color: #135d54;
+  border: solid 1px #fff;
+  color: #fff;
+  text-align: center;
+}
+
+.md .test {
+  padding-top: 15%;
+  color: #b49b0e;
+}
+
+.ios .test {
+  color: #0a26a1;
+}
+
+.page-listing {
+  color: red;
+}
+
+.ios .page-listing {
+  color: yellow;
+}
+
+.md .page-listing {
+  color: pink;
+}
+
+.header-icon {
+  display: flex; 
+  justify-content: end;
+} 
+
+.md .header-icon {
+  display: flex; 
+  justify-content: end;
+} 
+
+.ios .header-icon{  
+  display: flex; 
+  justify-content: end;
+}

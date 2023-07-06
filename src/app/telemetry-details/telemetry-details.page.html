@@ -1,0 +1,117 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>telemetry details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-row slot="start">
+      <ion-thumbnail>
+        <img
+          size="10"
+          alt="Silhouette of mountains"
+          src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+        />
+      </ion-thumbnail>
+      <ion-thumbnail>
+        <img
+          size="10"
+          alt="Silhouette of mountains"
+          src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+        />
+      </ion-thumbnail>
+    </ion-row>
+
+    <ion-row slot="start">
+      <ion-thumbnail>
+        <img
+          size="10"
+          alt="Silhouette of mountains"
+          src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+        />
+      </ion-thumbnail>
+      <ion-thumbnail>
+        <img
+          size="10"
+          alt="Silhouette of mountains"
+          src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+        />
+      </ion-thumbnail>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-label>Telemetry & Control</ion-label>
+    <ion-button [routerLink]="['/telemetry-filters']"size="small">Create Gateway</ion-button>
+    <ion-thumbnail>
+      <img
+        size="10"
+        alt="Silhouette of mountains"
+        src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+      />
+    </ion-thumbnail>
+  </ion-row>
+
+  <ion-searchbar value="Value"></ion-searchbar>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-subtitle>Chord_SRP_Test7-1H2 Naveen_801</ion-card-subtitle>
+      <ion-row>
+        <ion-icon name="logo-ionic" color="primary"></ion-icon>
+        <ion-label>Ready To Provision</ion-label>
+      </ion-row>
+      <ion-label>Device</ion-label>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-select aria-label="Favorite Fruit" value="apple">
+                <ion-select-option
+                  *ngFor="let item of [1,2,3,4,5]; let index"
+                  value="apple"
+                  >Telemetry 'item'</ion-select-option
+                >
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+        <ion-col><ion-label>Demand Poll All</ion-label></ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-content>
+    <ion-card *ngFor="let item of [1,2,3,4,5]; let index">
+      <ion-card-content>
+        <ion-card-subtitle>Modem Logitude</ion-card-subtitle>
+        <ion-row>
+          <ion-icon name="logo-ionic" color="primary"></ion-icon>
+          <ion-label>Operational</ion-label>
+        </ion-row>
+        <ion-grid>
+          <ion-row>
+            <ion-col>Previous Value</ion-col>
+            <ion-col>Current Value</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>1</ion-col>
+            <ion-col>3</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>Unit</ion-col>
+            <ion-col>Demand Poll</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <!-- <ion-col><ion-datetime></ion-datetime></ion-col> -->
+            <ion-col>date</ion-col>
+            <ion-col>edit</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-content>

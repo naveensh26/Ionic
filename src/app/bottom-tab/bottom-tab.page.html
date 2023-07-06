@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>bottom-tab</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="play-circle"></ion-icon>
+     Dashboard
+    </ion-tab-button>
+    <ion-tab-button tab="dashboard">
+      <ion-icon [routerLink]="['/wells']" name="radio"></ion-icon>
+      Well List
+    </ion-tab-button>
+    <ion-tab-button tab="library">
+      <ion-icon [routerLink]="['/alerts']" name="library"></ion-icon>
+      Alerts
+    </ion-tab-button>
+    <ion-tab-button tab="search">
+      <ion-icon [routerLink]="['/events']" name="search"></ion-icon>
+      Events
+    </ion-tab-button>
+    <ion-tab-button tab="search">
+      <ion-icon [routerLink]="['/telemetry']" name="search"></ion-icon>
+      Telemetry
+    </ion-tab-button>
+    <ion-tab-button tab="search">
+      <ion-icon [routerLink]="['/notifications']" name="search"></ion-icon>
+      Notification
+    </ion-tab-button>
+    <ion-tab-button tab="search">
+      <ion-icon [routerLink]="['/logout']" name="search"></ion-icon>
+      Logout
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
