@@ -17,9 +17,14 @@ export class DataService {
     ];
   }
 
+  getBooksList() {
+    return this.items;
+  }
+
   filterItems(searchTerm:any) {
     return this.items.filter((item:any) => {
       return item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
     });
   }
+  
 }

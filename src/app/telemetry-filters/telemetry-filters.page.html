@@ -1,12 +1,15 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Inline Modal</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content class="ion-padding">
+<ion-content class="backgroundBox">
   <ion-button expand="block" (click)="setOpen(true)">Open</ion-button>
-  <ion-modal [isOpen]="isModalOpen">
-    <ng-template>
+  <ion-modal style="background: #06062b" [isOpen]="isModalOpen">
+    <ng-template class="backgroundBox">
       <ion-header>
         <ion-toolbar>
           <ion-title>Filters</ion-title>
@@ -16,59 +19,64 @@
         </ion-toolbar>
       </ion-header>
       <ion-content>
-        <ion-accordion-group>
-          <ion-accordion value="first">
-            <ion-item slot="header" color="light">
-              <ion-label>Migration</ion-label>
-            </ion-item>
-            <!-- <div class="ion-padding" slot="content">First Content</div> -->
-            <div class="ion-padding" slot="content">
-              <ion-card>
-                <ion-card-content>
-                  <ion-grid>
-                    <ion-row>
-                      <ion-col>Flatining</ion-col>
-                      <ion-toggle></ion-toggle><br /><br />
-                    </ion-row>
+        <div class="backgroundBox">
+          <ion-accordion-group>
+            <ion-accordion value="first">
+              <ion-item slot="header" color="light">
+                <ion-label>Migration</ion-label>
+              </ion-item>
+              <!-- <div class="backgroundBox" slot="content">First Content</div> -->
+              <div class="backgroundBox" slot="content">
+                <ion-card>
+                  <ion-card-content class="backgroundBox">
+                    <ion-grid class="backgroundBox">
+                      <ion-row>
+                        <ion-col class="lableColor">Flatining</ion-col>
+                        <ion-toggle></ion-toggle><br /><br />
+                      </ion-row>
 
-                    <ion-row>
-                      <ion-col>Tagging</ion-col>
-                      <ion-toggle></ion-toggle><br /><br />
-                    </ion-row>
+                      <ion-row>
+                        <ion-col class="lableColor">Tagging</ion-col>
+                        <ion-toggle></ion-toggle><br /><br />
+                      </ion-row>
 
-                    <ion-row>
-                      <ion-col>Fluid Pound</ion-col>
-                      <ion-toggle></ion-toggle><br /><br />
-                    </ion-row>
+                      <ion-row>
+                        <ion-col class="lableColor">Fluid Pound</ion-col>
+                        <ion-toggle></ion-toggle><br /><br />
+                      </ion-row>
 
-                    <ion-row>
-                      <ion-col>Gas interference</ion-col>
-                      <ion-toggle></ion-toggle><br /><br />
-                    </ion-row>
-                  </ion-grid>
-                </ion-card-content>
-              </ion-card>
-            </div>
-          </ion-accordion>
-        </ion-accordion-group>
-
-        <ion-accordion-group>
+                      <ion-row>
+                        <ion-col class="lableColor">Gas interference</ion-col>
+                        <ion-toggle></ion-toggle><br /><br />
+                      </ion-row>
+                    </ion-grid>
+                  </ion-card-content>
+                </ion-card>
+              </div>
+            </ion-accordion>
+          </ion-accordion-group>
+        </div>
+        <ion-accordion-group class="backgroundBox">
           <ion-accordion value="first">
             <ion-item slot="header" color="light">
               <ion-label>Algorithms</ion-label>
             </ion-item>
-            <!-- <div class="ion-padding" slot="content">First Content</div> -->
-            <div class="ion-padding" slot="content">
-              <ion-card>
-                <ion-card-content>
-                  <ion-grid>
+            <!-- <div class="backgroundBox" slot="content">First Content</div> -->
+            <div class="backgroundBox" slot="content">
+              <ion-card class="backgroundBox">
+                <ion-card-content class="backgroundBox">
+                  <ion-grid class="backgroundBox">
                     <ion-row>
-                      <ion-col>Production Optimizer PI</ion-col>
+                      <ion-col class="lableColor"
+                        >Production Optimizer PI</ion-col
+                      >
                       <ion-toggle></ion-toggle><br /><br />
                     </ion-row>
 
                     <ion-row>
-                      <ion-col>Production Optimizer CI</ion-col>
+                      <ion-col class="lableColor"
+                        >Production Optimizer CI</ion-col
+                      >
                       <ion-toggle></ion-toggle><br /><br />
                     </ion-row>
                   </ion-grid>
@@ -83,24 +91,26 @@
             <ion-item slot="header" color="light">
               <ion-label>POC settings</ion-label>
             </ion-item>
-            <div class="ion-padding" slot="content">
-              <ion-card>
+            <div class="backgroundBox" slot="content">
+              <ion-card class="backgroundBox">
                 <ion-card-content>
                   <ion-grid>
                     <ion-row>
-                      <ion-col>Primary Fillage</ion-col>
+                      <ion-col class="lableColor">Primary Fillage</ion-col>
                       <ion-toggle></ion-toggle><br /><br />
                     </ion-row>
 
                     <ion-row>
-                      <ion-col>Secondary Pump Fillage</ion-col>
+                      <ion-col class="lableColor"
+                        >Secondary Pump Fillage</ion-col
+                      >
                       <ion-toggle></ion-toggle><br /><br />
                     </ion-row>
                   </ion-grid>
 
                   <ion-grid>
                     <ion-row>
-                      <ion-label>Downtime</ion-label>
+                      <ion-label class="lableColor">Downtime</ion-label>
                     </ion-row>
 
                     <ion-row>

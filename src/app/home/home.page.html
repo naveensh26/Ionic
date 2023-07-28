@@ -1,19 +1,81 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Ionic Form
-    </ion-title>
+    <ion-title> Ionic Form </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content class="auth-form">
+<ion-content class="auth-form" style="
+background: #06062b;">
+<div  style="
+background: #06062b;">
   <ion-grid>
     <ion-row>
       <ion-col align-self-center>
-        <ion-button [routerLink]="['/registration']" expand="block" color="primary">Register</ion-button>
+        <ion-button
+          [routerLink]="['/registration']"
+          expand="block"
+          color="primary"
+          >Register</ion-button
+        >
         <span class="divider line one-line">or</span>
         <span class="already">Already a user?</span>
-        <ion-button [routerLink]="['/login']" expand="block" color="danger">Sign In</ion-button>
+        <ion-button [routerLink]="['/login']" expand="block" color="primary"
+          >Sign In</ion-button
+        >
       </ion-col>
     </ion-row>
   </ion-grid>
+</div>
+  <!-- <ion-segment scrollable="true" value="default">
+    <ion-segment-button value="gateway">
+      <ion-label>Gateway</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="pollset">
+      <ion-label>Pollset</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="devices">
+      <ion-label>Devices</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="alarms">
+      <ion-label>Alarms</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="notifications">
+      <ion-label>Notifications</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="events">
+      <ion-label>Events</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+<ion-content>
+<ion-segment>
+  <ion-label>Type</ion-label>
+  <p></p>
+  <ion-input
+  type="email"
+  fill="solid"
+  label="Email"
+  labelPlacement="floating"
+  helperText="Enter a valid email"
+  errorText="Invalid email"
+  ngModel
+  email
+></ion-input>
+
+<ion-input
+  type="password"
+  fill="solid"
+  label="Password"
+  labelPlacement="floating"
+  helperText="Enter a valid password"
+  errorText="Invalid "
+  ngModel
+  email
+></ion-input>
+</ion-segment>
+</ion-content> -->
 </ion-content>

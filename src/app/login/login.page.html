@@ -7,18 +7,45 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+  <form class="item-background-color">
+    <ion-item >
+      <ion-label style = "color:#fff;margin-bottom: 1%;"position="fill">Email</ion-label>
+      <!-- <ion-input type="text" required></ion-input> -->
+      <ion-input
+      style="
+        padding-inline-start: 10px !important;
+        background: #fff;
+        border-radius: 25px;
+        border: 2px solid #73ad21;
+        padding: 20px;
+        margin: 3%;
+        width: 90%;
+        color: #000;
+      "
+    ></ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
+      <!-- <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" required></ion-input> -->
+      <ion-label style = "color:#fff;margin-bottom: 1%;"position="fill">Password</ion-label>
+      <!-- <ion-input type="text" required></ion-input> -->
+      <ion-input
+      type="password" required
+      style="
+        padding-inline-start: 10px !important;
+        background: #fff;
+        border-radius: 25px;
+        border: 2px solid #73ad21;
+        padding: 20px;
+        margin: 3%;
+        width: 90%;
+        color: #000;
+      "
+    ></ion-input>
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block"  [routerLink]="['/bottom-tab']">Sign In</ion-button>
+        <ion-button type="submit" color="primary" expand="block"  [routerLink]="['/bottom-tab']">Sign In</ion-button>
         <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
       </ion-col>
     </ion-row>

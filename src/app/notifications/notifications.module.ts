@@ -12,14 +12,13 @@ import { NotificationsPage } from './notifications.page';
 
 import { TelemetryPage } from '../telemetry/telemetry.page';
 
-
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NotificationsPageRoutingModule
+    NotificationsPageRoutingModule,
   ],
-  declarations: [NotificationsPage]
+  declarations: [NotificationsPage],
 })
 export class NotificationsPageModule {}

@@ -4,3 +4,15 @@ ion-col {
     color: #fff;
     text-align: center;
   }
+  ion-content {
+    --background: #06062b;
+    --color: #fff;
+  }
+  header {
+    --background: #06062b;
+    --color: #fff;
+  }
+
+  .item-background-color{
+    --ion-item-background:#06062b;
+}

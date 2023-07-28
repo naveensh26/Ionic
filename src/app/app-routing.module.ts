@@ -67,6 +67,29 @@ const routes: Routes = [
     path: 'telemetry-filters',
     loadChildren: () => import('./telemetry-filters/telemetry-filters.module').then( m => m.TelemetryFiltersPageModule)
   },
+  {
+    path: 'test',
+    loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
+  },
+  {
+    path: 'parent-test',
+    loadChildren: () => import('./parent-test/parent-test.module').then( m => m.ParentTestPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+  },
+  {
+    path: 'telemetry-type',
+    loadChildren: () => import('./telemetry-type/telemetry-type.module').then( m => m.TelemetryTypePageModule)
+  },
+  {
+    path: 'search-filter-bar',
+    loadChildren: () => import('./search-filter-bar/search-filter-bar.module').then( m => m.SearchFilterBarPageModule)
+  },
+ 
+  
+  
 ];
 
 @NgModule({

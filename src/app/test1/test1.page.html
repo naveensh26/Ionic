@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Test1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{titleTest}}</ion-title>
+      <ion-button (click)="dataHandler()">send</ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <label for="item-input">Add an item:</label>
+<input type="text" id="item-input" #newItem>
+<button type="button" (click)="addNewItem(newItem.value)">Add to parent's list</button>
+
+
+<div>
+  <input type="text" placeholder="Write a title" >
+  <button (click)="onAddBook()">Add Title</button>
+</div>
+</ion-content> -->
+
+<div >
+
+  <button>Test</button>
+
+  <ul *ngFor="let person of people">
+    <li [ngClass]="{
+      'text-success':person.country === 'UK',
+      'text-primary':person.country === 'USA',
+      'text-danger':person.country === 'HK'
+    }">{{ person.name }} ({{ person.country }})
+    </li>
+  </ul>
+
+</div>
