@@ -1,94 +1,77 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>telemetry</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <!-- <ion-row slot="start">
-      <ion-thumbnail>
-        <img
-          size="10"
-          alt="Silhouette of mountains"
-          src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-        />
-      </ion-thumbnail>
-      <ion-thumbnail>
-        <img
-          size="10"
-          alt="Silhouette of mountains"
-          src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-        />
-      </ion-thumbnail>
+  <ion-toolbar class="header">
+    <ion-row slot="start">
+      <ion-icon name="cloud" style="font-size: 25px; margin-top: 5%"></ion-icon>
+      <ion-list>
+        <ion-item class="header">
+          <ion-select aria-label="Favorite Fruit" value="test">
+            <ion-select-option value="test">App1</ion-select-option>
+            <ion-select-option value="banana">App2</ion-select-option>
+            <ion-select-option value="orange">App3</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-label style="align-self: center">App Name</ion-label>
     </ion-row>
 
-    <ion-row slot="start">
-      <ion-thumbnail>
-        <img
-          size="10"
-          alt="Silhouette of mountains"
-          src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-        />
-      </ion-thumbnail>
-      <ion-thumbnail>
-        <img
-          size="10"
-          alt="Silhouette of mountains"
-          src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-        />
-      </ion-thumbnail>
-    </ion-row> -->
-    
+    <ion-row slot="end" class="header-icon">
+      <ion-icon name="help-circle-outline" style="font-size: 25px"></ion-icon>
+      <ion-icon name="notifications-outline" style="font-size: 25px"></ion-icon>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <!-- <ion-row>
-    <ion-label>Well List</ion-label>
-    <ion-button size="small">Create Gateway</ion-button>
-    <ion-thumbnail>
-      <img
-        size="10"
-        alt="Silhouette of mountains"
-        src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-      />
-    </ion-thumbnail>
-  </ion-row> -->
-
-  <!-- <ion-accordion-group>
-    <ion-accordion value="first">
-      <ion-item slot="header" color="light">
-        <ion-label>Telemetry & Control</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">First Content</div>
-      <div class="ion-padding" slot="content">First Content</div>
-      <div class="ion-padding" slot="content">First Content</div>
-    </ion-accordion>
-  </ion-accordion-group> -->
-
-  <!-- <ion-list >
-    <ion-item>
-      <ion-select aria-label="Favorite Fruit" value="apple">
-      <ion-select-option  *ngFor="let item of [1,2,3,4,5]; let index" value="apple">Telemetry 'item'</ion-select-option>
-    </ion-select>
+  <ion-header collapse="fill">
+    <ion-item class="headerTitle">
+      <ion-label>Telemetry</ion-label>
+      <ion-row style="display: flex; justify-content: end">
+        <ion-button shape="round">Create Gateway</ion-button>
+        <ion-icon
+          name="chatbox-outline"
+          style="font-size: 25px; margin-top: 5%"
+        ></ion-icon>
+      </ion-row>
     </ion-item>
-    </ion-list> -->
 
-  <!-- <ion-searchbar value="Value"></ion-searchbar> -->
-  <ion-content >
-    <div style="background: #06062b">
-    <ion-card style="
-    background: #06062b;
-    box-shadow: 0.2px 0px 1px 2px #989aa2, 0 1px 0px 0 #989aa2;
-  " *ngFor="let item of [1,2,3,4,5]; let index">
-      <ion-card-content >
-        <ion-card-subtitle style="color: #fff">Chord_SRP_Test7-1H2</ion-card-subtitle>
-        <ion-card-subtitle [routerLink]="['/telemetry-details']" style="color: #fff">Naveen_801</ion-card-subtitle>
+    <ion-item class="headerTitle">
+      <ion-select
+        label="Telemetry & Control"
+        label-placement="fill"
+        placeholder="Telemetry"
+      >
+        <ion-select-option value="1">Telemetry 1</ion-select-option>
+        <ion-select-option value="2">Telemetry 2</ion-select-option>
+        <ion-select-option value="3">Telemetry 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-header>
+
+  <ion-content>
+    <ion-card
+      style="
+        background: #131629;
+        box-shadow: 0.2px 0px 1px 2px #8b90ad, 0 1px 0px 0 #8b90ad;
+      "
+      *ngFor="let item of [1,2,3,4,5]; let index"
+    >
+      <ion-card-content>
+        <ion-card-subtitle style="color: #fff"
+          >Chord_SRP_Test7-1H2</ion-card-subtitle
+        >
+        <ion-card-subtitle
+          [routerLink]="['/telemetry-details']"
+          style="color: #fff"
+          >Naveen_801</ion-card-subtitle
+        >
         <ion-row>
           <ion-icon name="logo-ionic" color="primary"></ion-icon>
-          <ion-label style="color: #fff">Ready To Provision</ion-label>
+          <ion-label style="color: #fff; font-size: 12px"
+            >Operational</ion-label
+          >
         </ion-row>
       </ion-card-content>
     </ion-card>
-  </div>
   </ion-content>
 </ion-content>

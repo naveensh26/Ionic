@@ -1,6 +1,24 @@
-.backgroundBox{
-    background: #06062b;
+.backgroundBox {
+  background: #06062b;
 }
-.lableColor{
-    color: #fff;
+.lableColor {
+  color: #fff;
+}
+.filterButton {
+  --background-hover: #6ba7ff;
+  --background-activated: #6ba7ff;
+  --background-focused: #6ba7ff;
+  --background: #080912;
+  --width: 60px;
+  --height: 60px;
+}
+
+.header {
+  --background: #6e728d;
+  --color: #fff;
+}
+
+ion-content {
+  --background: #6e728d;
+  --color: #fff;
 }

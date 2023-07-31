@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Test1Page } from './test1/test1.page';
 import { ChildComponent } from './child/child.component';
+import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
+
 
 // shared modules are only stored the components not pages
 
