@@ -8,7 +8,7 @@ import { OverlayEventDetail } from '@ionic/core/components';
   styleUrls: ['./telemetry-filters.page.scss'],
 })
 export class TelemetryFiltersPage implements OnInit {
-  isModalOpen = false;
+  isModalOpen = true;
   constructor() { }
 
   ngOnInit() {

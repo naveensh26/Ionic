@@ -64,12 +64,15 @@
       <ion-spinner name="bubbles"></ion-spinner>
     </ion-row>
     <ion-button id="open-loading">Show Loading</ion-button>
-    <ion-loading
+
+    <!-- <ion-loading
       class="custom-loading"
       trigger="open-loading"
       message="Loading..."
       [duration]="3000"
-    ></ion-loading>
+    ></ion-loading> -->
+
+    <app-loading></app-loading>
 
     <ion-radio-group value="strawberries">
       <ion-radio value="grapes">Grapes</ion-radio><br />

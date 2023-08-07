@@ -87,6 +87,10 @@ const routes: Routes = [
     path: 'search-filter-bar',
     loadChildren: () => import('./search-filter-bar/search-filter-bar.module').then( m => m.SearchFilterBarPageModule)
   },
+  {
+    path: 'details',
+    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
+  },
  
   
   

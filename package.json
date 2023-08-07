@@ -23,6 +23,7 @@
     "@angular/router": "^16.0.0",
     "@awesome-cordova-plugins/network": "^6.3.0",
     "@awesome-cordova-plugins/sqlite": "^6.3.0",
+    "@capacitor-community/sqlite": "^5.0.6",
     "@ionic/angular": "^7.0.0",
     "ionicons": "^7.0.0",
     "ng2-search-filter": "^0.4.7",

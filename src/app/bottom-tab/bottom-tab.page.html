@@ -11,28 +11,73 @@
      Dashboard
     </ion-tab-button>
     <ion-tab-button tab="dashboard">
-      <ion-icon [routerLink]="['/wells']" name="radio"></ion-icon>
+      <ion-icon [routerLink]="['/wells']" name="dashboard"></ion-icon>
       Well List
     </ion-tab-button>
-    <ion-tab-button tab="library">
-      <ion-icon [routerLink]="['/alerts']" name="library"></ion-icon>
+    <ion-tab-button tab="alerts">
+      <ion-icon [routerLink]="['/alerts']" name="alerts"></ion-icon>
       Alerts
     </ion-tab-button>
-    <ion-tab-button tab="search">
-      <ion-icon [routerLink]="['/events']" name="search"></ion-icon>
+    <ion-tab-button tab="events">
+      <ion-icon [routerLink]="['/events']" name="events"></ion-icon>
       Events
     </ion-tab-button>
-    <ion-tab-button tab="search">
-      <ion-icon [routerLink]="['/telemetry']" name="search"></ion-icon>
+    <ion-tab-button tab="telemetry">
+      <ion-icon [routerLink]="['/telemetry']" name="telemetry"></ion-icon>
       Telemetry
     </ion-tab-button>
-    <ion-tab-button tab="search">
-      <ion-icon [routerLink]="['/notifications']" name="search"></ion-icon>
+    <ion-tab-button tab="notification">
+      <ion-icon [routerLink]="['/notifications']" name="notification"></ion-icon>
       Notification
     </ion-tab-button>
-    <ion-tab-button tab="search">
-      <ion-icon [routerLink]="['/logout']" name="search"></ion-icon>
+    <!-- <ion-tab-button tab="logout">
+      <ion-icon [routerLink]="['/logout']" name="logout"></ion-icon>
       Logout
-    </ion-tab-button>
+    </ion-tab-button> -->
+<ion-label id="popover-button">more</ion-label>
+    <!-- </ion-tab-button> -->
+
+    <ion-popover
+      trigger="popover-button"
+      [dismissOnSelect]="true"
+      style="background-color: #fff"
+    >
+      <ng-template>
+        <ion-content style="margin-bottom: 45%">
+          <ion-list>
+            <ion-item [button]="true" [detail]="false">Reports</ion-item>
+            <ion-item [button]="true" [detail]="false">Customer Admin</ion-item>
+            <ion-item [button]="true" [detail]="false">SLB Admin</ion-item>
+            <ion-item [button]="true" id="nested-trigger"
+              >User Profile</ion-item
+            >
+
+            <ion-popover
+              trigger="nested-trigger"
+              [dismissOnSelect]="true"
+              side="top"
+            >
+              <ng-template>
+                <ion-content style="margin-bottom: 100%">
+                  <ion-list>
+                    <ion-item [button]="true" [detail]="false"
+                      >User Profile 1</ion-item
+                    >
+                    <ion-item [button]="true" [detail]="false"
+                      >User Profile 2</ion-item
+                    >
+                    <ion-item [button]="true" [detail]="false"
+                      >User Profile 3</ion-item
+                    >
+                  </ion-list>
+                </ion-content>
+              </ng-template>
+            </ion-popover>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
+    
+    
   </ion-tab-bar>
 </ion-tabs>

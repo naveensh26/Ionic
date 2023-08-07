@@ -1,132 +1,157 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>telemetry Type</ion-title>
+    <ion-title>Telemetry Type</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
-  <div style="background: #989aa2">
-    <ion-card>
-      <ion-card-content
-        style="
-          background: #06062b;
-          box-shadow: 0.2px 0px 1px 2px #989aa2, 0 1px 0px 0 #989aa2;
-        "
-      >
-        <ion-card-subtitle style="color: #fff"
-          >Chord_SRP_Test7-1H2 Naveen_801</ion-card-subtitle
-        >
-        <ion-row>
-          <ion-icon name="logo-ionic" color="primary"></ion-icon>
-          <ion-label style="color: #fff">Ready To Provision</ion-label>
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="fill">
+      <ion-item color="primary">
+        <ion-label>Telemetry & Control</ion-label>
+        <ion-row style="display: flex; justify-content: end">
+          <ion-button color="secondary " style="color: #fff" [routerLink]="['/telemetry-filters']" 
+            >Demand Poll All</ion-button
+          >
+          <ion-icon
+            name="chatbox-outline"
+            style="font-size: 25px; margin-top: 5%"
+          ></ion-icon>
         </ion-row>
-        <ion-row>
-          <ion-col>
-            <ion-segment-button
+      </ion-item>
+    </ion-header>
+
+    <ion-content>
+      <ion-content>
+        <div style="background: #22263d">
+          <ion-card>
+            <ion-card-content
               style="
-                color: #fff;
+                background: #06062b;
                 box-shadow: 0.2px 0px 1px 2px #989aa2, 0 1px 0px 0 #989aa2;
-                height: 100%;
               "
-              value="gateway"
             >
-              <ion-label style="color: #fff" s>Deploy Configuration</ion-label>
-            </ion-segment-button>
-          </ion-col>
+              <ion-card-subtitle style="color: #fff"
+                >Chord_SRP_Test7-1H2 Naveen_801</ion-card-subtitle
+              >
+              <ion-row>
+                <ion-icon name="logo-ionic" color="primary"></ion-icon>
+                <ion-label style="color: #fff">Ready To Provision</ion-label>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-segment-button
+                    style="
+                      color: #fff;
+                      box-shadow: 0.2px 0px 1px 2px #989aa2, 0 1px 0px 0 #989aa2;
+                      height: 100%;
+                    "
+                    value="gateway"
+                  >
+                    <ion-label style="color: #fff" s
+                      >Deploy Configuration</ion-label
+                    >
+                  </ion-segment-button>
+                </ion-col>
 
+                <ion-col>
+                  <ion-segment-button
+                    style="
+                      color: #fff;
+                      box-shadow: 0.2px 0px 1px 2px #989aa2, 0 1px 0px 0 #989aa2;
+                      height: 100%;
+                    "
+                    value="gateway"
+                  >
+                    <ion-label style="color: #fff">Deactive</ion-label>
+                  </ion-segment-button>
+                </ion-col>
+
+                <ion-col>
+                  <ion-segment-button
+                    style="
+                      color: #fff;
+                      box-shadow: 0.2px 0px 1px 2px #989aa2, 0 1px 0px 0 #989aa2;
+                      height: 100%;
+                    "
+                    value="gateway"
+                  >
+                    <ion-label style="color: #fff" s>Stand-By</ion-label>
+                  </ion-segment-button>
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+          <div>
+            <ion-segment
+              style="background: #06062b"
+              scrollable="true"
+              value="default"
+            >
+              <ion-segment-button style="background: #06062b" value="gateway">
+                <ion-label color="#ffff">Gateway</ion-label>
+              </ion-segment-button>
+
+              <ion-segment-button style="background: #06062b" value="pollset">
+                <ion-label>Pollset</ion-label>
+              </ion-segment-button>
+
+              <ion-segment-button style="background: #06062b" value="devices">
+                <ion-label>Devices</ion-label>
+              </ion-segment-button>
+
+              <ion-segment-button style="background: #06062b" value="alarms">
+                <ion-label>Alarms</ion-label>
+              </ion-segment-button>
+
+              <ion-segment-button
+                style="background: #06062b"
+                value="notifications"
+              >
+                <ion-label>Notifications</ion-label>
+              </ion-segment-button>
+
+              <ion-segment-button style="background: #06062b" value="events">
+                <ion-label>Events</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </div>
           <ion-col>
-            <ion-segment-button
+            <ion-label style="margin-left: 4%" color="#fff">Type</ion-label>
+            <ion-input
               style="
-                color: #fff;
-                box-shadow: 0.2px 0px 1px 2px #989aa2, 0 1px 0px 0 #989aa2;
-                height: 100%;
+                padding-inline-start: 10px !important;
+                background: #06062b;
+                border-radius: 25px;
+                border: 2px solid #73ad21;
+                padding: 20px;
+                height: 10px;
+                margin: 3%;
+                width: auto;
+                color: #ffff;
               "
-              value="gateway"
-            >
-              <ion-label style="color: #fff" s>Deactive</ion-label>
-            </ion-segment-button>
+            ></ion-input>
+            <div *ngFor="let item of [1,2,3,4,5]; let index">
+              <ion-label style="margin-left: 4%" color="#fff">ID</ion-label>
+              <ion-input
+                style="
+                  padding-inline-start: 25px !important;
+                  background: #06062b;
+                  border-radius: 25px;
+                  border: 2px solid #73ad21;
+                  padding-left: 100;
+                  height: 10px;
+                  margin: 3%;
+                  width: auto;
+                  color: #ffff;
+                "
+                placeholder="email@domain.com"
+              ></ion-input>
+            </div>
           </ion-col>
-
-          <ion-col>
-            <ion-segment-button
-              style="
-                color: #fff;
-                box-shadow: 0.2px 0px 1px 2px #989aa2, 0 1px 0px 0 #989aa2;
-                height: 100%;
-              "
-              value="gateway"
-            >
-              <ion-label style="color: #fff" s>Stand-By</ion-label>
-            </ion-segment-button>
-          </ion-col>
-        </ion-row>
-      </ion-card-content>
-    </ion-card>
-    <div>
-      <ion-segment
-        style="background: #06062b"
-        scrollable="true"
-        value="default"
-      >
-        <ion-segment-button style="background: #fff" value="gateway">
-          <ion-label color="#ffff">Gateway</ion-label>
-        </ion-segment-button>
-
-        <ion-segment-button style="background: #fff" value="pollset">
-          <ion-label>Pollset</ion-label>
-        </ion-segment-button>
-
-        <ion-segment-button style="background: #fff" value="devices">
-          <ion-label>Devices</ion-label>
-        </ion-segment-button>
-
-        <ion-segment-button style="background: #fff" value="alarms">
-          <ion-label>Alarms</ion-label>
-        </ion-segment-button>
-
-        <ion-segment-button style="background: #fff" value="notifications">
-          <ion-label>Notifications</ion-label>
-        </ion-segment-button>
-
-        <ion-segment-button style="background: #fff" value="events">
-          <ion-label>Events</ion-label>
-        </ion-segment-button>
-      </ion-segment>
-    </div>
-    <ion-col>
-      <ion-label style="margin-left: 4%" color="#fff">Type</ion-label>
-      <ion-input
-        style="
-          padding-inline-start: 10px !important;
-          background: #06062b;
-          border-radius: 25px;
-          border: 2px solid #73ad21;
-          padding: 20px;
-          height: 10px;
-          margin: 3%;
-          width: auto;
-          color: #ffff;
-        "
-      ></ion-input>
-      <div *ngFor="let item of [1,2,3,4,5]; let index">
-        <ion-label style="margin-left: 4%" color="#fff">ID</ion-label>
-        <ion-input
-          style="
-            padding-inline-start: 25px !important;
-            background: #06062b;
-            border-radius: 25px;
-            border: 2px solid #73ad21;
-            padding-left: 100;
-            height: 10px;
-            margin: 3%;
-            width: auto;
-            color: #ffff;
-          "
-          placeholder="email@domain.com"
-        ></ion-input>
-      </div>
-    </ion-col>
-  </div>
-</ion-content>
+        </div>
+      </ion-content> </ion-content></ion-content
+></ion-content>

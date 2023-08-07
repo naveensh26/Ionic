@@ -15,7 +15,8 @@
         <ion-toolbar class="header">
           <ion-title>Filters</ion-title>
           <ion-buttons slot="end">
-            <ion-button (click)="setOpen(false)">Close</ion-button>
+            <ion-button [routerLink]="['/telemetry-details']">Close</ion-button>
+            <!-- <ion-nav [root]="app-telemetry-filters"></ion-nav> -->
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
