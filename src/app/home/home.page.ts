@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  progressFlag :boolean= false;
   constructor() {}
 
 }

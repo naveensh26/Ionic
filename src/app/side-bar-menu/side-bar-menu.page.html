@@ -6,24 +6,72 @@
   </ion-header>
   <!-- <ion-content class="ion-padding">This is the menu content.</ion-content> -->
   <ion-content>
-    <ion-row size="12">      
-    <ion-label [routerLink]="['/dash-board']">DashBoard</ion-label>
-  </ion-row>
-  <ion-row size="12">  
-    <ion-label [routerLink]="['/wells']">Wells</ion-label>
-  </ion-row>
-  <ion-row size="12">
-    <ion-label [routerLink]="['/alerts']">Alerts</ion-label>
-  </ion-row>
-    <ion-row size="12">
-    <ion-label [routerLink]="['/notifications']">Notification</ion-label>
-  </ion-row>
-    <ion-row size="12">
-    <ion-label [routerLink]="['/events']">Events</ion-label>
-  </ion-row>
-    <ion-row size="12">
-    <ion-label [routerLink]="['/logout']">Logout</ion-label>
-  </ion-row>
+    <ion-row class="menu-content-item" size="12">
+      <ion-label [routerLink]="['/dash-board']">DashBoard</ion-label>
+    </ion-row>
+    <ion-row class="menu-content-item" size="12">
+      <ion-label [routerLink]="['/wells']">Well List</ion-label>
+    </ion-row>
+    <ion-row class="menu-content-item" size="12">
+      <ion-label [routerLink]="['/alerts']">Alerts</ion-label>
+    </ion-row>
+    <ion-row class="menu-content-item" size="12">
+      <ion-label [routerLink]="['/notifications']">Notification</ion-label>
+    </ion-row>
+    <ion-row class="menu-content-item" size="12">
+      <ion-label [routerLink]="['/events']">Events</ion-label>
+    </ion-row>
+    <ion-row class="menu-content-item" size="12">
+      <ion-label  id="nested-trigger1">Reports</ion-label>
+      <ion-icon style ="color: #fff;padding-left: 90%;"name="caret-forward-outline"></ion-icon>
+    </ion-row>
+
+    <ion-row class="menu-content-item" size="12">
+      <ion-label [routerLink]="['/events']">Custom Admin</ion-label>
+    </ion-row>
+
+    <ion-row class="menu-content-item" size="12">
+      <ion-label [routerLink]="['/events']">SLB Admin</ion-label>
+    </ion-row>
+    <ion-row class="menu-content-item" size="12">
+      <ion-label [routerLink]="['/logout']" >Logout</ion-label>
+    </ion-row>
+
+    <ion-popover
+        trigger="nested-trigger1"
+        [dismissOnSelect]="true"
+        side="right"
+      >
+        <ng-template>
+          <ion-content style="margin-bottom: 37%">
+            <ion-list>
+              <ion-item  (click)="itemClick()" color="dark" style ="color: #fff;"  [button]="true" [detail]="false"
+                >Reports 1</ion-item
+              >
+              <ion-item color="dark" style ="color: #fff;" [button]="true" [detail]="false"
+                >Reports 2</ion-item
+              >
+              <ion-item color="dark" style ="color: #fff;" [button]="true" [detail]="false"
+                >Reports 3</ion-item
+              >
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-popover>
+
+    <ion-content>
+      <ion-img
+        class="delfi-icon"
+        src="../../assets/icon/sidemenuslblogo.png"
+        alt=""
+      ></ion-img>
+
+      <ion-row class="bottomItem" size="12">
+        <ion-label [routerLink]="['/logout']"
+          >Go Back to Delfi Portal</ion-label
+        >
+      </ion-row>
+    </ion-content>
   </ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
@@ -32,7 +80,7 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>DashBoard</ion-title>
+      <!-- <ion-title>DashBoard</ion-title> -->
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding"> DashBoard Wells Charts </ion-content>

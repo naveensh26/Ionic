@@ -12,4 +12,8 @@ export class SideBarMenuPage implements OnInit {
   ngOnInit() {
   }
 
+itemClick (){
+  console.log("click item ----")
+}
+
 }

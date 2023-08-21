@@ -1,0 +1,192 @@
+<ion-content [fullscreen]="true">
+  <ion-accordion-group [multiple]="true" [value]="['first', 'third']">
+    <ion-accordion *ngFor="let item of data; let i= index">
+      <ion-item
+        slot="header"
+        color="dark"
+        [ngClass]="i == 0 ? 'expleft_under_pump':( i==1 ?'expleft_overpump':'expleft_optimum_pump')"
+      >
+        <div>
+          <p
+            [ngClass]="i == 0 ? 'under_pump_label_color':( i==1 ?'over_pump_label_color':'optimum_pump_label_color')"
+          >
+            Well Name 001
+          </p>
+          <p>2020-05-15 13:14:59</p>
+        </div>
+        <div style="margin-right: 5%">
+          <p class="optimum_pump"></p>
+          <p class="over_pump"></p>
+        </div>
+        <div>
+          <p>Over Pumping (PF 90%)</p>
+          <p>image well</p>
+        </div>
+      </ion-item>
+      <div slot="content">
+        <div
+          style="
+            background-color: #16192d;
+            color: #fff !important;
+            box-shadow: #ccced9;
+            border-radius: 25px;
+            border-style: solid;
+          "
+        >
+          <div
+            style="
+              width: 100%;
+              display: inline-flex;
+              flex: 1;
+              flex-direction: row;
+              border-radius: 10px;
+            "
+          >
+            <div>
+              <div style="display: flex; flex: 1; flex-direction: row">
+                <p
+                  style="
+                    width: 80px;
+                    overflow: hidden;
+                    max-height: 3.6em;
+                    line-height: 1.8em;
+                    text-overflow: ellipsis;
+                    margin-top: 30%;
+                  "
+                >
+                  SPM
+                </p>
+                <p style="margin-top: 30%">50%</p>
+              </div>
+              <div style="display: flex; flex: 1; flex-direction: row">
+                <p
+                  style="
+                    width: 80px;
+                    overflow: hidden;
+                    max-height: 3.6em;
+                    line-height: 1.8em;
+                  "
+                >
+                  Effective Runtime(%)
+                </p>
+                <p style="margin-top: 30%">50%</p>
+              </div>
+              <div style="display: flex; flex: 1; flex-direction: row">
+                <p
+                  style="
+                    width: 80px;
+                    overflow: hidden;
+                    max-height: 3.6em;
+                    line-height: 1.8em;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Min/Max load(%)
+                </p>
+                <p style="margin-top: 30%">50%</p>
+              </div>
+            </div>
+
+            <div>
+              <div style="display: flex; flex: 1; flex-direction: row">
+                <p
+                  style="
+                    width: 80px;
+                    overflow: hidden;
+                    max-height: 3.6em;
+                    line-height: 1.8em;
+                    text-overflow: ellipsis;
+                    height: 50%;
+                    margin-left: 5%;
+                  "
+                >
+                  Pumping Fillage
+                </p>
+                <p style="margin-top: 30%">50%</p>
+              </div>
+              <div style="display: flex; flex: 1; flex-direction: row">
+                <p
+                  style="
+                    width: 80px;
+                    overflow: hidden;
+                    max-height: 3.6em;
+                    line-height: 1.8em;
+                    text-overflow: ellipsis;
+                    margin-left: 5%;
+                  "
+                >
+                  Cycles Today
+                </p>
+                <p style="margin-top: 30%">50%</p>
+              </div>
+              <div style="display: flex; flex: 1; flex-direction: row">
+                <p
+                  style="
+                    width: 80px;
+                    overflow: hidden;
+                    max-height: 3.6em;
+                    line-height: 1.8em;
+                    text-overflow: ellipsis;
+                    margin-left: 5%;
+                  "
+                >
+                  Gearbox Load(%)
+                </p>
+                <p style="margin-top: 30%">50%</p>
+              </div>
+            </div>
+
+            <div>
+              <div style="display: flex; flex: 1; flex-direction: row">
+                <p
+                  style="
+                    width: 80px;
+                    overflow: hidden;
+                    max-height: 3.6em;
+                    line-height: 1.8em;
+                    text-overflow: ellipsis;
+                    margin-left: 5%;
+                  "
+                >
+                  Inferred Production(bpd)
+                </p>
+                <p style="margin-top: 30%">50%</p>
+              </div>
+              <div style="display: flex; flex: 1; flex-direction: row">
+                <p
+                  style="
+                    width: 80px;
+                    overflow: hidden;
+                    max-height: 3.6em;
+                    line-height: 1.8em;
+                    text-overflow: ellipsis;
+                    margin-left: 5%;
+                  "
+                >
+                  Structural Load
+                </p>
+                <p style="margin-top: 30%">50%</p>
+              </div>
+              <div style="display: flex; flex: 1; flex-direction: row">
+                <p
+                  style="
+                    width: 80px;
+                    overflow: hidden;
+                    max-height: 3.6em;
+                    line-height: 1.8em;
+                    text-overflow: ellipsis;
+                    margin-left: 5%;
+                  "
+                >
+                  Rod Stress(%)
+                </p>
+                <p style="margin-top: 30%">50%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>
+

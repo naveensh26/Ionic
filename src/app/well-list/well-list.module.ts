@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { WellsPageRoutingModule } from './wells-routing.module';
+import { WellListPageRoutingModule } from './well-list-routing.module';
 
-import { WellsPage } from './wells.page';
+import { WellListPage } from './well-list.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    WellsPageRoutingModule,
-    
+    WellListPageRoutingModule
   ],
-  declarations: [WellsPage],  
+  declarations: [WellListPage],
+  
   schemas: [ CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA ]
 })
-export class WellsPageModule {}
+export class WellListPageModule {}

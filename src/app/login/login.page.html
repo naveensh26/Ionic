@@ -7,12 +7,13 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
+  
   <form class="item-background-color">
+    
     <ion-item>
-      <ion-label style="color: #fff; margin-bottom: 1%" position="fill"
+      <!-- <ion-label style="color: #fff; margin-bottom: 1%" position="fill"
         >Email</ion-label
       >
-      <!-- <ion-input type="text" required></ion-input> -->
       <ion-input
         style="
           padding-inline-start: 10px !important;
@@ -24,15 +25,21 @@
           width: 90%;
           color: #000;
         "
-      ></ion-input>
+      ></ion-input> -->
+      <!-- 
+        [(ngModel)] ="name" -->
+    <!-- <app-text-input label ="{{label}}"></app-text-input>
+    
+    <app-text-input label ="{{label}}"></app-text-input> -->
+
+    <app-listdropdown></app-listdropdown>
+    
     </ion-item>
     <ion-item lines="full">
-      <!-- <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input> -->
+      
       <ion-label style="color: #fff; margin-bottom: 1%" position="fill"
         >Password</ion-label
       >
-      <!-- <ion-input type="text" required></ion-input> -->
       <ion-input
         type="password"
         required
@@ -46,6 +53,7 @@
           width: 90%;
           color: #000;
         "
+        (input)="firstinput($event)"
       ></ion-input>
     </ion-item>
     <ion-row>
@@ -55,6 +63,7 @@
           color="primary"
           expand="block"
           [routerLink]="['/bottom-tab']"
+          (click)="loginValidation()" 
           >Sign In</ion-button
         >
         <a [routerLink]="['/forgot-password']" class="small-text"
@@ -91,7 +100,7 @@
 
     <ion-checkbox labelPlacement="fixed">Fixed Width Label</ion-checkbox>
   </form>
-  <app-alert-dialog></app-alert-dialog>
+  <app-alert-dialog [header] ="alertHeader"  [subheader] ="alertSubHeader" [message]="alertMsg"></app-alert-dialog>
   <ion-list>
     <ion-item>
       <ion-badge slot="start">11</ion-badge>
@@ -101,14 +110,15 @@
       <ion-badge slot="end">22</ion-badge>
       <ion-label>Badge in end slot</ion-label>
     </ion-item>
+    
+    <app-listdropdown></app-listdropdown>
     <ion-datetime presentation="time"></ion-datetime>
     <ion-datetime-button datetime="datetime"></ion-datetime-button>
-
   </ion-list>
-  
-<ion-modal [keepContentsMounted]="true">
-  <ng-template>
-    <ion-datetime id="datetime"></ion-datetime>
-  </ng-template>
-</ion-modal>
+
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime id="datetime"></ion-datetime>
+    </ng-template>
+  </ion-modal>
 </ion-content>

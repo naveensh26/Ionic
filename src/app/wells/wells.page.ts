@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { InfiniteScrollCustomEvent,Platform } from '@ionic/angular';
 import { DataService } from '../api/data.service';
+import { LoadingServiceService } from '../loading-service.service';
 
 
 @Component({
@@ -10,15 +11,31 @@ import { DataService } from '../api/data.service';
   styleUrls: ['./wells.page.scss'],
 })
 export class WellsPage implements OnInit {
-  itemsList : string[] = [];
+  @Input() itemsList : string[] = [];
   serviceTest :any;
   searchText : any
+  
+  public show:boolean = false;
+  public buttonName:any = 'Show';
+  
 
-  constructor(private platform: Platform, private dataService: DataService) {}
+  constructor(private platform: Platform, private dataService: DataService, public loading: LoadingServiceService) {}
   ngOnInit() {
+    this.loading.present();
     this.generateItems();
+    this.loading.dismiss();
     this.serviceTest = this.dataService.filterItems('two');
     console.log("search --",this.serviceTest,this.searchText);
+  }
+
+  toggle() {
+    this.show = !this.show;
+
+    // Change the name of the button.
+    if(this.show)  
+      this.buttonName = "Hide";
+    else
+      this.buttonName = "Show";
   }
 
   private generateItems() {
@@ -49,7 +66,7 @@ export class WellsPage implements OnInit {
 
       // set val to the value of the searchbar
       const val = ev.target.value;
-
+      console.log("search value --",val);
       // if the value is an empty string don't filter the items
       if (val && val.trim() !== '') {
           this.isItemAvailable = true;

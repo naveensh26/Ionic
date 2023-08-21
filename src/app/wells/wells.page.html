@@ -8,16 +8,26 @@
 </ion-header>
 
 <ion-content>
-  
-<!-- <ion-searchbar value="Value" placeholder="Enter text to search"  [(ngModel)]="searchText" autofocus></ion-searchbar> -->
+  <!-- <ion-searchbar value="Value" placeholder="Enter text to search"  [(ngModel)]="searchText" autofocus></ion-searchbar> -->
+
+  <button (click)="toggle()" id="bt">{{buttonName}}</button>
 
 
-<ion-searchbar  placeholder="Enter text to search" type="text" (ionChange)="getItems($event)"></ion-searchbar>
+  <ion-searchbar
+    *ngIf="show"
+    placeholder="Enter text to search"
+    type="text"
+    (ionChange)="getItems($event)"
+  ></ion-searchbar>
 
-<ion-list>
+  <!-- <app-listdropdown></app-listdropdown> -->
+  <ion-list>
     <ion-item *ngFor="let item of itemsList; let index">
       <ion-avatar slot="start">
-        <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" />
+        <img
+          [src]="'https://picsum.photos/80/80?random=' + index"
+          alt="avatar"
+        />
       </ion-avatar>
       <ion-checkbox></ion-checkbox>
       <ion-label>{{ item }}</ion-label>
